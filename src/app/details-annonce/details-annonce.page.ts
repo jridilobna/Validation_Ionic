@@ -14,22 +14,22 @@ export class DetailsAnnoncePage implements OnInit {
     private annonceService: AnnonceService,
     private alertCtrl: AlertController,
     private router: Router) { }
-
+    annonceId= this.activatedRoute.snapshot.paramMap.get('id');
   ngOnInit() {
-  
+
      const annonceId = this.activatedRoute.snapshot.paramMap.get('id');
      this.annonceService.getAnnonceId(annonceId).subscribe({
        next: (response: any) => {
-         this.selectedAnnonce = response; 
+         this.selectedAnnonce = response;
        },
        error: (err) => {
          console.error(err);
-      
+
        }
      });
   }
-  
- 
+
+
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Attontion !',
@@ -38,7 +38,17 @@ export class DetailsAnnoncePage implements OnInit {
         {
           text: 'Yes',
           handler: () => {
-            this.annonceService.deleteAnnonce(this.selectedAnnonce);
+            this.annonceService.deleteAnnonce(this.annonceId).subscribe(
+              {
+                next:(response)=>{
+                  console.log("annonce deleted succsafuly")
+                  this.router.navigateByUrl('/home')
+                },
+                error:(err) =>{
+                   console.log(err)
+                }
+              }
+            );
             this.router.navigateByUrl('/home');
           },
         },

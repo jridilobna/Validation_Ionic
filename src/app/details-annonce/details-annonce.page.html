@@ -14,30 +14,38 @@
 
 <ion-content [fullscreen]="true">
   <div class="ion-margin">
-   
+
     <strong> Details de cette annonce </strong>
     <ion-grid>
       <ion-row>
         <ion-col size="4" offset="4">
-          <img [src]="selectedAnnonce.image" />
+          <img [src]="" />
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="8" offset="2">
           <ion-label>
             <strong>Title :</strong>
-            {{ selectedAnnonce.title }}
-            <br/> <br/> 
-            <strong>Proprietaire</strong> : {{selectedAnnonce.proprietaire}} </ion-label>
-          
+            {{ selectedAnnonce?.title }}
+            <br/> <br/>
+            <strong>Proprietaire</strong> : {{selectedAnnonce?.owner}} </ion-label>
+
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="8" offset="2">
           <ion-label>
-          <strong>Categorie :</strong>   {{selectedAnnonce.categorie }} <br>
+          <strong>Categorie :</strong>   {{selectedAnnonce?.categorie}}
+        </ion-label>
           <br>
-          <strong>Description : </strong> <br><br>{{ selectedAnnonce.descrption}} </ion-label>
+          <br>
+          <ion-label>
+          <strong>Description : </strong> {{selectedAnnonce?.description}} 
+        </ion-label>
+        <br>
+        <br>
+          <ion-label>
+            <strong>contact :</strong>   {{selectedAnnonce?.contact}} <br>          </ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>

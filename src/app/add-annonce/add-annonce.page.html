@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>Add New Annonce</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> 
 
 <ion-content [fullscreen]="true" >
     <br/>
@@ -17,18 +17,18 @@
         <form #f="ngForm">
           <ion-label>Title <span class="etoi">*</span> </ion-label>
           <ion-input  [(ngModel)]="title" name="title" type="text" required></ion-input>
-      
+
           <ion-label>Description </ion-label>
           <ion-input  [(ngModel)]="description" name="description" type="text" required></ion-input>
-      
+
           <ion-label>Categorie<span class="etoi">*</span></ion-label>
-         
+
           <select [(ngModel)]="categorie" name="categorie" required class="sel">
             <option value="" disabled selected>Select Category</option>
             <option value="vente_voiture">Vente de voiture</option>
             <option value="materiels_info">Matériels informatiques</option>
           </select>
-          
+
       <br>
         <!--  <ion-label>Categorie<span class="etoi">*</span></ion-label>
           <ion-input  [(ngModel)]="categorie" name="categorie" type="text" required placeholder="vente voiture ou materiels info"></ion-input>
@@ -45,19 +45,19 @@
            <br>
           <ion-label> Owner <span class="etoi">*</span></ion-label>
           <ion-input [(ngModel)]="owner" name="owner" type="text" required></ion-input>
-          
-      
+
+
           <ion-label> E-mail Or Phone number <span class="etoi">*</span></ion-label>
           <ion-input [(ngModel)]="contact" name="contact" type="text" required></ion-input>
-          
+
           <ion-label>Image </ion-label>
           <ion-input  [(ngModel)]="image" name="image" type="text"></ion-input>
-          
-          <ion-button  class="addbtn"(click)="add()" 
+
+          <ion-button  class="addbtn"(click)="add()"
            [disabled]="!f.form.valid" >Add Annonce<ion-icon name="checkmark-done-outline"></ion-icon></ion-button
           >
         </form>
       </ion-card-content>
     </ion-card>
-  
+
 </ion-content>

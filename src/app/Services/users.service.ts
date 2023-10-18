@@ -16,11 +16,11 @@ export class UsersService {
    return this.http.post(`https://ionic-85bc7-default-rtdb.firebaseio.com/User.json`,user)
   }
 
-  getAllUsers(): Observable<any[]> {
-    return this.http.get<any[]>('https://ionic-85bc7-default-rtdb.firebaseio.com/User.json');
+  getAllUsers() {
+    return this.http.get('https://ionic-85bc7-default-rtdb.firebaseio.com/User.json');
   }
 
-  signIn(username: string, password: string): Observable<boolean> {
+  /*signIn(username: string, password: string): Observable<boolean> {
     return this.getAllUsers().pipe(
       map(users => {
         const user = users.find(u => u.username === username && u.password === password);
@@ -28,11 +28,11 @@ export class UsersService {
       })
     );
   }
+  */
 
 
- 
+
  }
- 
- 
- 
- 
+
+
+
