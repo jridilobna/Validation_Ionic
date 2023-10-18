@@ -1,0 +1,10 @@
+.textmenu{
+padding-left: 20px;
+padding-top :6px ;
+font-weight: bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ion-content ,ion-toolbar {
+    --background: linear-gradient(to bottom, #beb2b2, #00fff2);
+    color: white; // Couleur du texte à l'intérieur de ion-content, blanc dans cet exemple
+  }

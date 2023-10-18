@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    
+      <ion-title>
+        LogIn
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+      <ion-card-header>
+      </ion-card-header>
+      <ion-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+          <ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+          </ion-item>
+          <ion-item>
+
+          </ion-item>
+          <ion-button expand="full">Connect</ion-button>
+        </form>
+          <p class="ion-text-center">Vous n'avez pas de compte ? <a href="/signup">Inscrivez-vous ici</a></p>
+          <p class="ion-text-center"><a href="/mot-de-passe-oublie">Mot de passe oublié ?</a></p>
+      </ion-card-content>
+  </ion-card>
+
+</ion-content>

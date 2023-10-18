@@ -1,0 +1,36 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+   <ion-buttons>
+    <ion-button><ion-icon name="home-outline" size="large"></ion-icon> <span class="textmenu">HOME</span></ion-button>
+    <br/>
+    <br/>
+    <br/>
+    
+   </ion-buttons>
+   <ion-buttons>
+    <ion-button routerLink="/signin"><ion-icon name="log-in-outline" size="large"></ion-icon><span class="textmenu">SIGNIN</span></ion-button>
+    <br/>
+    <br/>
+    <br/>
+   </ion-buttons>
+   <ion-buttons>
+    <ion-button routerLink="/signup"><ion-icon name="person-add-outline" size="large" ></ion-icon><span class="textmenu">SIGNUP</span></ion-button>
+   </ion-buttons>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title> Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"></ion-content>
+</div>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+      <ion-title>signUp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header>
+          <ion-card-title>Insecription</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <form #f ="ngForm">    
+                      <ion-label position="floating">Last Name</ion-label>
+                      <ion-input type="text" [(ngModel)]="lastname" name="lastname"></ion-input>
+                 
+                      <ion-label position="floating">First Name</ion-label>
+                      <ion-input type="text" [(ngModel)]="firstname" name="firstname"></ion-input>
+                
+                      <ion-label position="floating">E-mail</ion-label>
+                      <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+                
+                      <ion-label position="floating">Password</ion-label>
+                      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+              
+              <ion-button expand="full" type="submit" (click)="addUser()">S'inscrire</ion-button>
+          </form>
+      </ion-card-content>
+  </ion-card>
+</ion-content>
