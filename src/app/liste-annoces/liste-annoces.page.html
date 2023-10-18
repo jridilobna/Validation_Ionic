@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>listeAnnoces</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+     <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+       <ion-button slot="start"  routerLink="/addAnnonce">
+      
+        <ion-icon name="add" size="large"></ion-icon>
+       </ion-button>  
+      </ion-buttons>
+    <ion-title>Your Annoces</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listeAnnoces</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-title size="large">All Annoces</ion-title>
+      <ion-grid>
+        <ion-item   [routerLink]="['/details', annonce.id]" *ngFor="let annonce of annonces">
+          <ion-avatar> <img [src]="annonce.image" /></ion-avatar>
+          <ion-label class="ion-margin-horizontal"> {{annonce.title}} </ion-label>
+          <ion-buttons slot="end">
+            <ion-button slot="start" [routerLink]="['/details', annonce.id]">
+              <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+            </ion-button>  
+           </ion-buttons>
+        </ion-item>
+      </ion-grid>
+  
 </ion-content>
